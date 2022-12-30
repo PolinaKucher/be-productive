@@ -1,0 +1,111 @@
+.faq-card {
+  height: fit-content;
+  border-radius: 16px;
+  padding: 25px 16px;
+  position: relative;
+  width: 380px;
+
+  @include media("<=screen") {
+    width: 340px;
+  }
+
+  @include media("<=desktop") {
+    position: unset;
+    width: 380px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 12px 16px;
+    border-radius: 5px;
+    width: 300px;
+  }
+
+  &__head {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border: none;
+    width: 100%;
+
+    &:focus {
+      border: none;
+    }
+  }
+
+  &__title {
+    font-size: em(24);
+    font-weight: 700;
+    color: $c-white;
+
+    @media (max-width: 576px) {
+      font-size: em(14);
+    }
+  }
+
+  &__icon {
+    font-size: em(40);
+
+    @media (max-width: 576px) {
+      font-size: em(20);
+    }
+  }
+
+  &__content {
+    transition: height 0.2s ease-out;
+    border-radius: inherit;
+    background: inherit;
+    padding-bottom: 25px;
+    padding-right: 16px;
+    padding-left: 16px;
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+    top: 62px;
+    left: 0;
+
+    @include media("<=desktop") {
+      position: unset;
+      padding: 0 0;
+    }
+  }
+
+  &__text {
+    border-top: 1px solid rgba($color: $c-white, $alpha: 0.2);
+    padding-bottom: 25px;
+    padding-top: 25px;
+    line-height: 26px;
+    font-size: em(20);
+    margin-top: 25px;
+    font-weight: 300;
+
+    @media (max-width: 576px) {
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-size: em(12);
+      line-height: 16px;
+      margin-top: 12px;
+    }
+  }
+
+  &--green {
+    background-color: $c-green;
+  }
+  &--blue {
+    background-color: $c-blue;
+  }
+  &--orange {
+    background-color: $c-orange;
+  }
+}
+
+.icon-minus {
+  display: none;
+}
+
+.active .icon-minus {
+  display: block;
+}
+
+.active .icon-plus {
+  display: none;
+}

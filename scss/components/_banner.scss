@@ -1,0 +1,220 @@
+.banner {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 240px;
+    margin-top: 120px;
+    height: 100vh;
+
+    @include media("<=desktop") {
+      flex-direction: column;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 0;
+    }
+
+    @include media("<=phone") {
+      margin-top: 80px;
+    }
+  }
+
+  &__block {
+    max-width: 580px;
+
+    @include media("<=screen") {
+      max-width: 520px;
+    }
+
+    @include media("<=desktop") {
+      display: flex;
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    height: 600px;
+    width: 100%;
+
+    @include media("<=tablet") {
+      height: 300px;
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    max-width: 334px;
+    border-radius: 30px;
+    transition: 0.4s ease-out;
+
+    &:hover {
+      transform: translateY(-20px);
+      transition: 0.6s ease-out;
+    }
+
+    &:hover ~ .banner__photo {
+      transition: 0.4s ease-out;
+    }
+
+    @media (max-width: 576px) {
+      border-radius: 15px;
+    }
+
+    &:first-child {
+      right: 290px;
+      filter: drop-shadow(5px 4px 4px rgba(0, 0, 0, 0.25));
+      z-index: 3;
+
+      &:hover {
+        filter: drop-shadow(15px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+
+      @include media("<=screen") {
+        right: 240px;
+      }
+
+      @include media("<=desktop") {
+        width: 260px;
+        margin: auto;
+        top: 670px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      @include media("<=tablet") {
+        width: 260px;
+        margin: auto;
+        top: 650px;
+      }
+
+      @media (max-width: 576px) {
+        top: 150px;
+        width: 146px;
+      }
+    }
+
+    &:nth-child(2n) {
+      right: 146px;
+      z-index: 2;
+      filter: blur(1px) brightness(75%)
+        drop-shadow(5px 4px 4px rgba(0, 0, 0, 0.25));
+
+      &:hover {
+        z-index: 3;
+        filter: drop-shadow(15px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+
+      @include media("<=screen") {
+        right: 120px;
+      }
+      @include media("<=desktop") {
+        top: 450px;
+        width: 240px;
+        left: -70px;
+
+        &:hover {
+          top: 445px;
+          width: 260px;
+          left: 0px;
+        }
+      }
+      @include media("<=tablet") {
+        top: 440px;
+
+        &:hover {
+          transform: translateY(-25px);
+        }
+      }
+      @media (max-width: 576px) {
+        width: 126px;
+        top: 300px;
+        left: -30px;
+
+        &:hover {
+          top: 305px;
+          width: 146px;
+        }
+      }
+    }
+
+    &:last-child {
+      right: 0px;
+      z-index: 1;
+      filter: blur(1px) brightness(55%) contrast(200%)
+        drop-shadow(5px 4px 4px rgba(0, 0, 0, 0.25));
+
+      &:hover {
+        z-index: 3;
+        filter: drop-shadow(-15px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+
+      @include media("<=desktop") {
+        filter: blur(1px) brightness(75%)
+          drop-shadow(5px 4px 4px rgba(0, 0, 0, 0.25));
+        top: 450px;
+        width: 240px;
+        right: -70px;
+
+        &:hover {
+          width: 260px;
+          right: 0px;
+        }
+      }
+      @include media("<=tablet") {
+        top: 440px;
+      }
+
+      @media (max-width: 576px) {
+        width: 126px;
+        top: 300px;
+        right: -30px;
+
+        &:hover {
+          width: 146px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    cursor: default;
+    font-weight: 600;
+    font-size: em(56);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+
+    @include media("<=screen") {
+      font-size: em(46);
+    }
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
+  }
+
+  &__title span {
+    text-transform: uppercase;
+    color: $c-orange;
+    font-weight: 800;
+    font-size: 64px;
+
+    @include media("<=screen") {
+      font-size: 54px;
+    }
+    @media (max-width: 576px) {
+      font-size: 24px;
+    }
+  }
+
+  &__button {
+    width: 220px;
+
+    @media (max-width: 576px) {
+      width: 124px;
+    }
+  }
+}

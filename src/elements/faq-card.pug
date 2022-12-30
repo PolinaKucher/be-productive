@@ -1,0 +1,15 @@
+mixin faq-card(args='')
+  - let classes = ''
+  - args.green ? classes += 'faq-card--green' : null
+  - args.orange ? classes += 'faq-card--orange' : null
+  - args.blue ? classes += 'faq-card--blue' : null
+
+  .faq-card(class=classes)
+    button.faq-card__head#collapse(type='button', class=classes)
+      span.faq-card__title=args.title
+      svg.icon.icon-minus.faq-card__icon
+        use(xlink:href='#icon-minus')
+      svg.icon.icon-plus.faq-card__icon
+        use(xlink:href='#icon-plus')
+    .faq-card__content
+      p.faq-card__text=args.text

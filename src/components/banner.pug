@@ -1,0 +1,24 @@
+mixin banner()
+  section.banner#home
+    .wrapper.banner__wrapper
+
+      .banner__block 
+        h1.banner__title MANAGE YOUR TASKS EASILY WITH 
+          br
+          span BE PRODUCTIVE
+        .banner__button
+          +button({
+            text: 'Get demo',
+            title: "Get demo",
+            demo: true,
+          })
+
+      .banner__img 
+        img.banner__photo(src="assets/images/app.jpg" alt="App")
+        img.banner__photo(src="assets/images/app-2.jpg" alt="App")
+        img.banner__photo(src="assets/images/app-3.jpg" alt="App")
+
+      .circle.circle--green
+        .circle__inner
+      .stroke.stroke--1
+      .stroke.stroke--2

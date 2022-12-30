@@ -1,0 +1,22 @@
+mixin header()
+  header.header 
+    .wrapper.header__wrapper
+
+      .header__logo 
+        +logo()
+
+      .header__block 
+        .header__navigation 
+          +navigation({
+            header: true,
+          })
+
+        .header__button 
+          +button({
+            type: 'button',
+            text: 'Get demo',
+            blackMode: true,
+          })
+
+        .header__burger
+          +burger()

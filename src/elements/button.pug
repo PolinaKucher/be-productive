@@ -1,0 +1,12 @@
+mixin button(args='')
+  - const type = args.type || 'button'
+  - let classes = ''
+  - args.demo ? classes += 'button--demo' : null
+  - args.blackMode ? classes += 'button--black' : null
+  - args.blueMode ? classes += 'button--blue' : null 
+
+  button.button(type=args.type, class=classes, title=args.title)
+    span.button__text=args.text
+
+    if !args.text 
+      span(style='color:red;') Default text

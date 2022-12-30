@@ -1,0 +1,45 @@
+mixin modal(args='')
+  .modal#modal
+    .modal__wrapper 
+      .modal__head
+        h1.modal__title=args.title
+
+        button(type='button')#close.modal__close
+          span.modal__bar
+          span.modal__bar
+      .modal__content
+        if args.form
+          .modal__form
+            +form
+
+        svg.icon(class=args.svgClass).modal__photo
+          use(xlink:href=args.use)
+      if args.next 
+        .modal__button--form
+          +button({
+            type: 'submit',
+            text: 'Next',
+            blueMode: true,
+            })
+      else
+        .modal__button
+          if args.subscribe 
+            +button({
+              type: 'button',
+              text: 'Subscribe',
+              blueMode: true,
+            })
+
+          if args.download
+            a(href="./assets/images/subscription.jpg" download) 
+              +button({
+                type: 'button',
+                text: 'Download',
+                blueMode: true,
+                })
+
+      if args.counter
+        .modal__counter 
+          button(type="button").modal__num 1
+          button(type="button").modal__num 2
+

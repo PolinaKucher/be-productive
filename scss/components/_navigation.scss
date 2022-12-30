@@ -1,0 +1,79 @@
+.navigation {
+  transition: $t-normal;
+  z-index: 910;
+  overflow: hidden;
+
+  &__header {
+    @include media("<=screen") {
+      background-color: rgba($c-white, $alpha: 0.98);
+      justify-content: center;
+      position: fixed;
+      max-height: 0;
+      display: flex;
+      top: 80px;
+      right: 0;
+      left: 0;
+    }
+    
+    @include media("<=phone") {
+      top: 40px;
+    }
+  }
+
+
+  &__list {
+    display: flex;
+    height: 100%;
+    gap: 40px;
+
+    @include media("<=screen") {
+      gap: 30px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &--footer {
+      gap: 62px;
+      flex-direction: column;
+      display: flex;
+
+      @include media("<=desktop") {
+        flex-direction: row;
+        gap: 40px;
+        justify-content: space-between;
+      }
+
+      @include media("<=phone") {
+        gap: 15px;
+      }
+    }
+  }
+
+  &__link {
+    color: rgba($color: $c-mine-shaft, $alpha: 0.5);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: em(20);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px;
+    white-space: nowrap;
+
+    &:hover {
+      color: rgba($color: $c-mine-shaft, $alpha: 1);
+    }
+
+    @include media("<=tablet") {
+      font-size: 14px;
+      font-weight: 400;
+      padding: 0;
+    }
+  }
+}
+
+.open {
+  transition: min-height 0.4s linear;
+  max-height: 240px;
+  min-height: 240px;
+}

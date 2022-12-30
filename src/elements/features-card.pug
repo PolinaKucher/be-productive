@@ -1,0 +1,12 @@
+mixin features-card(args='')
+  - let classes = ''
+  - args.green ? classes += 'card--green' : null
+  - args.orange ? classes += 'card--orange' : null
+  - args.blue ? classes += 'card--blue' : null
+
+  .swiper-slide.card(class=classes)
+    svg.icon.card__icon(class=args.class)
+      use(xlink:href=args.href)
+    h3.card__title=args.title 
+    //- .card__line 
+    p.card__text=args.text

@@ -1,0 +1,36 @@
+mixin features()
+  section.features#features
+    .wrapper.features__wrapper 
+    
+      h2.features__title HOW IT WORKS
+      span.features__subtitle Quick overview of key features.
+
+      .swiper.features__slider 
+        .swiper-wrapper
+          +features-card({
+            green: true,
+            class: 'icon-check',
+            href: '#icon-check',
+            title: 'Create your own task',
+            text: 'Add and remove tasks. Mark already completed.',
+          })
+          +features-card({
+            blue: true,
+            class: 'icon-book-open',
+            href: '#icon-book-open',
+            title: 'Read the blog',
+            text: 'Read and save articles. All news in one place.',
+          })
+          +features-card({
+            orange: true,
+            class: 'icon-chart-bar',
+            href: '#icon-chart-bar',
+            title: 'Follow the statistic',
+            text: 'Keep track of tasks. Always be aware of the statistics.',
+          })
+
+      .features__button
+        +button({
+          text: 'Get demo',
+          demo: true,
+        })

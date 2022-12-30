@@ -1,0 +1,42 @@
+.header {
+  background-color: $c-white;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80px;
+
+  @include media("<=phone") {
+    height: 40px;
+  }
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 212px;
+
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__button {
+    margin-left: 100px;
+    width: 180px;
+
+    @include media("<=screen") {
+      display: none;
+    }
+  }
+}

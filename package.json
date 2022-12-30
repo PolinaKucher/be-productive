@@ -1,0 +1,27 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "javascript final project",
+  "main": "index.js",
+  "scripts": {
+    "dev-pug": "pug -w index.pug --pretty",
+    "dev-scss": "sass --watch index.scss index.css",
+    "prod": "pug index.pug && sass index.scss index.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolinaKucher/be-productive.git"
+  },
+  "keywords": [
+    "be-productive"
+  ],
+  "author": "polina kucher plugged2004@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PolinaKucher/be-productive/issues"
+  },
+  "homepage": "https://github.com/PolinaKucher/be-productive#readme",
+  "dependencies": {
+    "swiper": "^8.4.5"
+  }
+}

@@ -1,0 +1,20 @@
+mixin footer()
+  footer.footer 
+    .wrapper.footer__wrapper 
+
+      .footer__head 
+        .footer__logo
+          a.footer__link(href="#") 
+            svg.icon.icon-logo.footer__icon
+              use(xlink:href='#icon-logo')
+          +logo()
+        +socials()
+
+      .footer__nav 
+        +navigation({
+          footer: true,
+        })
+        
+      .footer__map
+        #map
+        a.footer__address(href="https://www.google.com/maps/place/404+Miller+Ave,+South+San+Francisco,+CA+94080,+%D0%A1%D0%A8%D0%90/@37.6570128,-122.4146483,17z/data=!3m1!4b1!4m5!3m4!1s0x808f79a884758bd1:0x5c7c12d265eaea78!8m2!3d37.6570128!4d-122.4124596" target='_blank') 404 MILLER AVE SOUTH SAN FRANCISCO CA 94080-2704 USA

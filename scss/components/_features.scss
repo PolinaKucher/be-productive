@@ -1,0 +1,63 @@
+.features {
+  &__wrapper {
+    margin-top: 120px;
+    margin-bottom: 240px;
+    min-width: 0;
+
+    @media (max-width: 576px) {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__title {
+    @include media("<=desktop") {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    font-size: em(24);
+
+    @include media("<=desktop") {
+      display: block;
+      text-align: center;
+    }
+
+    @include media("<=screen") {
+      font-size: em(20);
+    }
+
+    @media (max-width: 576px) {
+      font-size: em(14);
+    }
+  }
+  &__slider {
+    margin-bottom: 32px;
+  }
+
+  &__button {
+    width: 220px;
+    margin: 0 auto;
+
+    @media (max-width: 576px) {
+      width: 124px;
+    }
+  }
+}
+
+// .swiper-wrapper {
+//   display: flex;
+//   flex-wrap: nowrap;
+//   gap: 20px;
+//   margin-bottom: 32px;
+// }
+
+// .swiper-slide {
+//   flex-shrink: unset;
+//   width: auto;
+
+
+//   @include media ("<=desktop") {
+//     width: 380px !important;
+//   }
+// }

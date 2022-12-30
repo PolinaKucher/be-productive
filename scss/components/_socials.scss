@@ -1,0 +1,44 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-size: em(24);
+
+  @include media("<=tablet") {
+    font-size: 20px;
+  }
+
+  @include media("<=phone") {
+    font-size: 16px;
+  }
+
+  &__link {
+    transition: $t-normal;
+    color: $c-mine-shaft;
+
+    &:hover .socials__icon {
+      transition: $t-normal;
+      fill: $c-blue;
+    }
+  }
+}
+
+.icon-logo {
+  fill: $c-mine-shaft;
+}
+
+.icon-facebook {
+  fill: $c-mine-shaft;
+}
+
+.icon-behance {
+  fill: $c-mine-shaft;
+}
+
+.icon-reddit {
+  fill: $c-mine-shaft;
+}
+
+.icon-youtube {
+  fill: $c-mine-shaft;
+}

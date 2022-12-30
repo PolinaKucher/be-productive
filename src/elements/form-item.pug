@@ -1,0 +1,8 @@
+mixin form-item(args='') 
+  //- - const type = args.type || 'text'
+
+  label.form-item
+    span.form-item__title=args.title
+    input(placeholder=args.place name=args.name type=args.type).form-item__element
+    .form-item__error(id=args.id)
+

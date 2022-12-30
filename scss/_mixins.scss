@@ -1,0 +1,4 @@
+// Generate EM
+@function em($px) {
+  @return $px / $fs-base + em;
+}

@@ -1,0 +1,53 @@
+mixin form()
+  form(method="post").form#form
+    .form__wrapper
+
+      +form-item({
+        title: "First name",
+        place: "Name",
+        id: 'js-name-error',
+        type: "text",
+        name: 'firstName'
+      })
+
+      +form-item({
+        title: "Last name",
+        place: "Last name",
+        id: 'js-last-name-error',
+        type: "text",
+        name: 'lastName'
+      })
+
+      +form-item({
+        title: "Username",
+        place: "Create username",
+        id: 'js-username-error',
+        type: "text",
+        name: 'username'
+      })
+
+      +form-item({
+        title: "E-mail",
+        place: "gunterfriz4536@gmail.com",
+        id: 'js-email-error',
+        type: "email",
+        name: 'email'
+      })
+
+      +form-item({
+        title: "Password",
+        type: "password",
+        id: 'js-password-error',
+        name: 'password'
+      })
+
+      .form__footer
+        .modal__counter 
+          button(type="button").modal__num 1
+          button(type="button").modal__num 2
+        .form__button
+          +button({
+            type: 'submit',
+            text: 'Next',
+            blueMode: true,
+          })

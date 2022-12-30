@@ -1,0 +1,36 @@
+.contacts {
+  &__wrapper {
+    margin-top: 120px;
+    margin-bottom: 240px;
+
+    @include media ('<=desktop') {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    @media (max-width: 576px) {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: em(24);
+    line-height: 34px;
+    margin-bottom: 32px;
+    max-width: 900px;
+
+    @media (max-width: 576px) {
+      font-size: em(14);
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    width: 280px;
+    @media (max-width: 576px) {
+      width: 124px;
+    }
+  }
+}

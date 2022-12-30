@@ -1,0 +1,17 @@
+mixin navigation(args='')
+  - let classes = ''
+  - let classess = ''
+  - args.footer ? classes += 'navigation__list--footer' : null
+  - args.header ? classess += 'navigation__header' : null
+
+  nav.navigation#js-navigation(class=classess)
+    .navigation__wrapper
+      ul.navigation__list(class=classes)
+        li.navigation__item
+          a(href="#home").navigation__link Home
+        li.navigation__item
+          a(href="#features").navigation__link How it works
+        li.navigation__item
+          a(href="#about-us").navigation__link About us
+        li.navigation__item
+          a(href="#contacts").navigation__link Contacts

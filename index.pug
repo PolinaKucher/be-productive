@@ -1,0 +1,65 @@
+extends ./src/common/layout
+
+block title 
+  title Be Productive
+block style 
+  link(rel="icon" href="./favicon.ico" type="image/x-icon")
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+  link(rel="stylesheet" href="./index.css")
+
+block content
+  //- *Header
+  +header()
+
+  //- *Banner
+  +banner()
+
+  //- *Features section
+  +features()
+
+  //- *About us section
+  +about-us()
+
+  //- *FAQ section
+  +faq()
+
+  //- *Contacts
+  +contacts()
+
+  //- *Footer
+  +footer()
+
+  //- *Modal
+  +modal({
+    title: "Let's get started!",
+    form: true,
+    svgClass: 'icon-modal-1',
+    use: "#icon-modal-1",
+  })
+
+  +modal({
+    title: 'Keep in touch!',
+    subscribe: true,
+    svgClass: 'icon-modal-2',
+    use: "#icon-modal-2",
+    counter: true,
+  })
+
+  +modal({
+    title: 'Get demo',
+    download: true,
+    svgClass: 'icon-modal-3',
+    use: "#icon-modal-3",
+  })
+
+//- Scripts
+block script 
+
+
+  script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+
+  script(src='https://code.jquery.com/jquery-3.6.1.min.js' integrity='sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=' crossorigin='anonymous')
+
+  script(type='module' src="./index.js")
+  
+  script(defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDObVTCs6Fil_VvxA3hxYsG-bGJjwg_mhA&region=EN&language=en&callback=initMap&v=weekly')

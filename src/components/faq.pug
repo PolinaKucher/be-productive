@@ -1,0 +1,31 @@
+mixin faq()
+  section.faq 
+    .wrapper.faq__wrapper
+
+      h2.faq__title FAQ
+
+      .faq__cards 
+        +faq-card({
+          green: true,
+          title: 'Privacy',
+          text: 'We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media.',
+        })
+        +faq-card({
+          blue: true,
+          title: 'Lost an account',
+          text: "If you lose your account, please contact our application support. We will do our best to help you.",
+        })
+        +faq-card({
+          orange: true,
+          title: 'Pricing',
+          text: 'Our application is absolutely free for all users.',
+        })
+        
+      .circle.circle--blue
+        .circle__inner
+      .circle.circle--green-2
+        .circle__inner
+      .stroke.stroke--5
+      .stroke.stroke--6
+      .stroke.stroke--7
+      .stroke.stroke--8

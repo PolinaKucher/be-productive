@@ -1,0 +1,18 @@
+include ../components/index
+include ../elements/index
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    block style
+    block title
+      title Template
+  body
+    include ../../assets/icons/symbol-defs.svg
+    .app
+      block content
+    block script 
+      //- script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD10cqCnWoKBFIRi563eUKkfLxjbiVYR-E&region=EN&language=en&callback=initMap&v=weekly' async)
+      //- script(defer src="./index.js")

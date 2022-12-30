@@ -1,0 +1,26 @@
+.logo {
+  display: flex;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: em(24);
+  color: $c-mine-shaft;
+  text-transform: uppercase;
+
+  @include media("<=tablet") {
+    font-size: 20px;
+  }
+  @include media("<=phone") {
+    font-size: 16px;
+  }
+
+  &:hover {
+    & .logo__animate {
+      color: $c-green;
+      transform: rotate(360deg);
+    }
+  }
+
+  &__animate {
+    transition: $t-transform;
+  }
+}
